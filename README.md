@@ -1,7 +1,5 @@
 # PageRank-Parallel
 
-# DCGAN
-
 ## How to use
 
 First of all use the make command to compile the files.
