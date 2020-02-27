@@ -65,7 +65,7 @@ void pageRank(Graph g, double* solution, double damping, double convergence) {
         globalDiff = 0.0;
 
         //evaluate the score for each node
-        #pragma omp parallel for reduction(+: broadcastScore)
+        #pragma omp parallel for reduction(+: broadcastScore) schedule(dynamic, 16)
         for (int i = 0; i < numNodes; ++i) {
             score_new[i] = 0.0;
 
